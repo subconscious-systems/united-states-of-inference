@@ -111,6 +111,48 @@ ${rows
 `;
 writeFileSync(join(root, "llms.txt"), llms);
 
+/* ---------- agents.md: everything on the page, for agents ---------- */
+
+const cell = (s) => String(s).replace(/\|/g, "\\|").replace(/\n/g, " ");
+const byProvider = [...rows].sort((a, b) => a.provider.localeCompare(b.provider));
+const agents = `# ${TITLE}: data for agents
+
+${DESCRIPTION}
+
+Source: ${SITE} · Made by Subconscious (https://subconscious.dev)
+
+## How to read this
+
+- There are ${rows.length} states and ${rows.length} providers. Each state has exactly one provider, and each provider has exactly one state.
+- The match is about character, not location. A provider gets the state it is most like (its ethos, what it is known for, what it does), not the state where it is headquartered.
+- The list is not ranked. States are in alphabetical order.
+- Deep link to any state with ${SITE}#<state-name>, for example ${SITE}#texas.
+
+## State → provider
+
+| State | Provider | Why | Website |
+| --- | --- | --- | --- |
+${rows.map((r) => `| ${cell(r.state)} | ${cell(r.provider)} | ${cell(r.why)} | ${r.url} |`).join("\n")}
+
+## Provider → state
+
+| Provider | State |
+| --- | --- |
+${byProvider.map((r) => `| ${cell(r.provider)} | ${cell(r.state)} |`).join("\n")}
+
+## Providers in detail
+
+${rows
+  .map(
+    (r) =>
+      `### ${r.provider} (${r.state})\n\n${r.why}\n\n${r.tagline ? `${r.tagline}.\n\n` : ""}${r.facts.map((f) => `- ${f}`).join("\n")}${
+        r.url ? `\n\nWebsite: ${r.url}` : ""
+      }\n\nOn the map: ${SITE}#${slug(r.state)}`
+  )
+  .join("\n\n")}
+`;
+writeFileSync(join(root, "agents.md"), agents);
+
 /* ---------- sitemap.xml ---------- */
 
 const today = new Date().toISOString().slice(0, 10);
@@ -120,8 +162,9 @@ writeFileSync(
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url><loc>${SITE}</loc><lastmod>${today}</lastmod></url>
   <url><loc>${SITE}llms.txt</loc><lastmod>${today}</lastmod></url>
+  <url><loc>${SITE}agents.md</loc><lastmod>${today}</lastmod></url>
 </urlset>
 `
 );
 
-console.log(`wrote ${rows.length} states to index.html, llms.txt, sitemap.xml`);
+console.log(`wrote ${rows.length} states to index.html, llms.txt, agents.md, sitemap.xml`);
