@@ -285,13 +285,12 @@ On the map: https://subconscious-systems.github.io/united-states-of-inference/#m
 
 ### Massachusetts: Subconscious
 
-Boston has run a marathon every April since 1897. Subconscious came out of MIT across the river, and its Marathon models keep agents going for hours.
+Home of the original marathon, the Boston Marathon. Subconscious builds Marathon models that keep agents going for hours.
 
 Inference for long-running agents with 200k+ token sessions.
 
 - Built for long-running agents, with sessions past 200k tokens
 - Marathon versions of GLM-5.3 and DeepSeek V4.1 tuned for long agent runs
-- Spun out of MIT research; OpenAI- and Anthropic-compatible API
 
 Website: https://www.subconscious.dev
 

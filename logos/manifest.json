@@ -291,8 +291,7 @@
     "tagline": "Inference for long-running agents with 200k+ token sessions",
     "facts": [
       "Built for long-running agents, with sessions past 200k tokens",
-      "Marathon versions of GLM-5.3 and DeepSeek V4.1 tuned for long agent runs",
-      "Spun out of MIT research; OpenAI- and Anthropic-compatible API"
+      "Marathon versions of GLM-5.3 and DeepSeek V4.1 tuned for long agent runs"
     ]
   },
   "morph": {
