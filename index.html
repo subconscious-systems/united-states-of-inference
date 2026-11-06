@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>The United States of Inference</title>
+  <meta name="description" content="Fifty inference providers, one state each.">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='8' fill='%23111'/><circle cx='16' cy='16' r='6' fill='%23fff'/></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css?v=16">
+</head>
+<body>
+  <header class="top">
+    <h1 id="title" tabindex="0" aria-label="The United States of Inference" aria-describedby="about">The United States of Inference</h1>
+    <p class="about" id="about" role="tooltip">There’s so many inference providers, how do you tell the difference? The United States of Inference maps inference providers to states based on each of their unique qualities (vibes).</p>
+    <button class="pill" id="view-all" aria-expanded="false" aria-controls="all">View all</button>
+  </header>
+
+  <main class="stage" id="stage">
+    <div class="map" id="map">
+      <svg id="svg" viewBox="0 0 975 610" role="group" aria-label="Map of the United States">
+        <g id="states"></g>
+        <g id="lift" aria-hidden="true"></g>
+      </svg>
+      <div class="logos" id="logos" aria-hidden="true"></div>
+    </div>
+  </main>
+
+  <div class="tip" id="tip" role="tooltip" aria-hidden="true"></div>
+
+  <aside class="panel" id="panel" aria-live="polite" aria-hidden="true">
+    <div class="grip" id="grip"></div>
+    <button class="close" id="close" aria-label="Close">
+      <svg viewBox="0 0 16 16" width="14" height="14" aria-hidden="true"><path d="M4 4l8 8M12 4l-8 8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+    </button>
+    <div class="panel-inner" id="panel-inner"></div>
+  </aside>
+
+  <div class="all" id="all" aria-hidden="true">
+    <div class="all-backdrop" id="all-backdrop"></div>
+    <section class="all-sheet" role="dialog" aria-modal="true" aria-label="All states">
+      <button class="close" id="all-close" aria-label="Close">
+        <svg viewBox="0 0 16 16" width="14" height="14" aria-hidden="true"><path d="M4 4l8 8M12 4l-8 8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+      </button>
+      <ul class="all-list" id="all-list"></ul>
+    </section>
+  </div>
+
+  <a class="credit" href="https://subconscious.dev" target="_blank" rel="noopener">created by Subconscious</a>
+
+  <script type="module" src="app.js?v=16"></script>
+</body>
+</html>

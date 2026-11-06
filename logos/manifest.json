@@ -1,0 +1,740 @@
+{
+  "moonshot": {
+    "file": "moonshot.svg",
+    "primary": "#1783FF",
+    "secondary": "#000000",
+    "ink": "#111111",
+    "mono": true,
+    "source": "https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/moonshotai.svg",
+    "url": "https://www.moonshot.ai",
+    "tagline": "Beijing lab behind Kimi and the open-weight Kimi K models",
+    "facts": [
+      "Kimi K3 is an open-weight ~2.8T-param MoE, among the largest open models you can download",
+      "1M-token context, aimed at long documents and agent work",
+      "Kimi models are a common pick for agentic coding on other hosts too"
+    ]
+  },
+  "crusoe": {
+    "file": "crusoe.svg",
+    "primary": "#CEEB13",
+    "secondary": "#000000",
+    "ink": "#111111",
+    "mono": true,
+    "source": "crusoe.ai header logo inline SVG (mark only, wordmark cropped)",
+    "url": "https://www.crusoe.ai",
+    "tagline": "Vertically integrated AI cloud, from energy to managed inference",
+    "facts": [
+      "Owns the whole stack: power generation, data centers, GPUs and the inference API",
+      "Builds next to stranded and renewable energy, including the 1.2 GW Abilene Stargate campus",
+      "Managed Inference sits on capacity it controls end to end, not rented GPUs"
+    ]
+  },
+  "generalcompute": {
+    "file": "generalcompute.png",
+    "primary": "#7828F8",
+    "secondary": "#FFFFFF",
+    "ink": "#ffffff",
+    "mono": true,
+    "source": "https://www.generalcompute.com/icon.png (tile keyed out to alpha)",
+    "url": "https://www.generalcompute.com",
+    "tagline": "Inference cloud running on ASICs instead of GPUs",
+    "facts": [
+      "Serves models on SambaNova ASICs instead of GPUs",
+      "Pitches speed and cost that come from the chip, not from GPU tuning"
+    ]
+  },
+  "deepinfra": {
+    "file": "deepinfra.svg",
+    "primary": "#2A3275",
+    "secondary": "#5699DB",
+    "ink": "#ffffff",
+    "mono": true,
+    "source": "https://cdn.jsdelivr.net/npm/@lobehub/icons-static-svg@latest/icons/deepinfra.svg",
+    "url": "https://deepinfra.com",
+    "tagline": "Low-cost serverless API for open-source models",
+    "facts": [
+      "Among the lowest per-token prices for popular open models",
+      "Huge catalog: text, embeddings, image and speech models behind one OpenAI-compatible API",
+      "Simple pay-as-you-go, no commitments"
+    ]
+  },
+  "openai": {
+    "file": "openai.svg",
+    "primary": "#10A37F",
+    "secondary": "#000000",
+    "ink": "#111111",
+    "mono": true,
+    "source": "https://cdn.jsdelivr.net/npm/@lobehub/icons-static-svg@latest/icons/openai.svg",
+    "url": "https://openai.com",
+    "tagline": "Frontier lab behind the GPT models, ChatGPT and the OpenAI API",
+    "facts": [
+      "Serves its own frontier models: GPT, reasoning models, image, audio and realtime voice",
+      "The OpenAI API format is the one most other providers copy",
+      "The only first-party home for the newest GPT models"
+    ]
+  },
+  "baseten": {
+    "file": "baseten.svg",
+    "primary": "#19E76E",
+    "secondary": "#000000",
+    "ink": "#111111",
+    "mono": true,
+    "source": "https://cdn.jsdelivr.net/npm/@lobehub/icons-static-svg@latest/icons/baseten.svg",
+    "url": "https://www.baseten.co",
+    "tagline": "Inference platform for serving open-source and custom models",
+    "facts": [
+      "Built for production: dedicated deployments of your own or open models with autoscaling",
+      "Truss packaging and its own inference stack tuned per model",
+      "Runs across multiple clouds so capacity follows demand"
+    ]
+  },
+  "gmicloud": {
+    "file": "gmicloud.svg",
+    "primary": "#D55816",
+    "secondary": "#82C200",
+    "ink": "#111111",
+    "mono": true,
+    "source": "https://cdn.jsdelivr.net/npm/@lobehub/icons-static-svg@latest/icons/gmicloud.svg",
+    "url": "https://www.gmicloud.ai",
+    "tagline": "GPU cloud offering serverless inference and dedicated clusters",
+    "facts": [
+      "Owns GPU infrastructure in the US and Asia-Pacific, a rare mix",
+      "Same provider for serverless inference and reserved clusters"
+    ]
+  },
+  "modal": {
+    "file": "modal.svg",
+    "primary": "#7FEE64",
+    "secondary": "#000000",
+    "ink": "#111111",
+    "mono": true,
+    "source": "https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/modal.svg",
+    "url": "https://modal.com",
+    "tagline": "Serverless GPU cloud for running AI inference and sandboxes",
+    "facts": [
+      "Run arbitrary Python on GPUs, not just a fixed model menu",
+      "Containers cold-start in seconds and scale to zero",
+      "Sandboxes for running agent-generated code are a big part of the business"
+    ]
+  },
+  "meta": {
+    "file": "meta.svg",
+    "primary": "#0467DF",
+    "secondary": "#FFFFFF",
+    "ink": "#ffffff",
+    "mono": true,
+    "source": "https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/meta.svg",
+    "url": "https://www.meta.com",
+    "tagline": "Meta Superintelligence Labs serving Muse models; maker of Llama",
+    "facts": [
+      "Made the Llama family, which kicked off the open-weight model wave",
+      "Now serves Muse models from Meta Superintelligence Labs via the Meta Model API",
+      "Muse Spark Open is an 816B-param open-weight MoE (42B active)"
+    ]
+  },
+  "openrouter": {
+    "file": "openrouter.svg",
+    "primary": "#C8FC00",
+    "secondary": "#050808",
+    "ink": "#111111",
+    "mono": true,
+    "source": "https://cdn.jsdelivr.net/npm/@lobehub/icons-static-svg@latest/icons/openrouter.svg",
+    "url": "https://openrouter.ai",
+    "tagline": "Unified API routing requests across hundreds of LLMs",
+    "facts": [
+      "One API and one bill for hundreds of models from dozens of providers",
+      "Routes each request to a provider by price, speed or uptime, with automatic fallback",
+      "Its public usage rankings are a de facto leaderboard for what developers actually use"
+    ]
+  },
+  "armada": {
+    "file": "armada.svg",
+    "primary": "#1D2A33",
+    "secondary": "#FFFFFF",
+    "ink": "#ffffff",
+    "mono": true,
+    "source": "https://www.armada.ai/assets/images/favicon/production/favicon.svg (tile removed)",
+    "url": "https://www.armada.ai",
+    "tagline": "Containerized edge data centers for AI where data is generated",
+    "facts": [
+      "Inference at the edge: containerized data centers shipped to where data is created",
+      "Built for remote sites like energy fields, defense and mining with little or no connectivity"
+    ]
+  },
+  "openscale": {
+    "file": "openscale.svg",
+    "primary": "#08090B",
+    "secondary": "#FFFFFF",
+    "ink": "#ffffff",
+    "mono": true,
+    "source": "https://openscale.so/favicon.svg (tile removed)",
+    "url": "https://openscale.so",
+    "tagline": "Cheap, fast API for DeepSeek V4.1 Flash and GLM open models",
+    "facts": [
+      "Narrow menu, low prices: DeepSeek V4.1 Flash and GLM models",
+      "DeepSeek V4.1 Flash at $0.06/M input on promo, at 200+ tok/s",
+      "Speaks both the OpenAI and Anthropic API formats"
+    ]
+  },
+  "vercel": {
+    "file": "vercel.svg",
+    "primary": "#000000",
+    "secondary": "#FFFFFF",
+    "ink": "#ffffff",
+    "mono": true,
+    "source": "https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/vercel.svg",
+    "url": "https://vercel.com/ai-gateway",
+    "tagline": "Vercel's single API gateway to hundreds of AI models",
+    "facts": [
+      "A gateway, not a host: one key for hundreds of models across providers",
+      "No markup on tokens, even with your own keys",
+      "Built into the Vercel AI SDK, with automatic failover between providers"
+    ]
+  },
+  "groq": {
+    "file": "groq.svg",
+    "primary": "#F55036",
+    "secondary": "#FFFFFF",
+    "ink": "#111111",
+    "mono": true,
+    "source": "https://cdn.jsdelivr.net/npm/@lobehub/icons-static-svg@latest/icons/groq.svg",
+    "url": "https://groq.com",
+    "tagline": "Inference neocloud built on LPU and NVIDIA hardware",
+    "facts": [
+      "Runs models on its own LPU chips, built for low-latency token generation",
+      "Known for very high tokens per second on open models",
+      "Licensed its tech to Nvidia in a ~$20B deal and runs 13 data centers"
+    ]
+  },
+  "wafer": {
+    "file": "wafer.png",
+    "primary": "#5AEDAF",
+    "secondary": "#3B6CF4",
+    "ink": "#111111",
+    "mono": true,
+    "source": "https://www.wafer.ai/favicon.png (keyed to alpha)",
+    "url": "https://www.wafer.ai",
+    "tagline": "Fast inference for open models",
+    "facts": [
+      "Offers a flat-rate plan (Wafer Pass) as well as per-token pricing",
+      "Fast open-model inference on NVIDIA B300s"
+    ]
+  },
+  "inception": {
+    "file": "inception.svg",
+    "primary": "#17C4C4",
+    "secondary": "#000000",
+    "ink": "#111111",
+    "mono": true,
+    "source": "https://cdn.jsdelivr.net/npm/@lobehub/icons-static-svg@latest/icons/inception.svg",
+    "url": "https://www.inceptionlabs.ai",
+    "tagline": "Diffusion LLMs (Mercury) generating tokens in parallel",
+    "facts": [
+      "Diffusion LLMs: Mercury writes many tokens in parallel instead of one at a time",
+      "That makes it several times faster than same-size autoregressive models",
+      "Mercury was the first commercial diffusion LLM"
+    ]
+  },
+  "mistral": {
+    "file": "mistral.svg",
+    "primary": "#FA500F",
+    "secondary": "#FFAF00",
+    "ink": "#111111",
+    "mono": true,
+    "source": "https://cdn.jsdelivr.net/npm/@lobehub/icons-static-svg@latest/icons/mistral.svg",
+    "url": "https://mistral.ai",
+    "tagline": "Paris lab building open-weight models and sovereign AI infrastructure",
+    "facts": [
+      "Europe's leading lab, with open weights under Apache 2.0",
+      "Mistral Large 3 is a 675B-param open MoE",
+      "Sells sovereign deployments for governments and companies that need data to stay local"
+    ]
+  },
+  "thinkingmachines": {
+    "file": "thinkingmachines.svg",
+    "primary": "#2D333B",
+    "secondary": "#E8E8E8",
+    "ink": "#ffffff",
+    "mono": true,
+    "source": "https://thinkingmachines.ai/images/apple-touch-icon.png (traced to SVG)",
+    "url": "https://thinkingmachines.ai",
+    "tagline": "Mira Murati's research lab; Tinker API for fine-tuning open models",
+    "facts": [
+      "Doesn't serve a chat API: Tinker lets you fine-tune open models without managing GPUs",
+      "You write the training loop, it handles the distributed infrastructure",
+      "Research lab from former OpenAI CTO Mira Murati"
+    ]
+  },
+  "cloudflare": {
+    "file": "cloudflare.svg",
+    "primary": "#F38020",
+    "secondary": "#FAAD3F",
+    "ink": "#111111",
+    "mono": true,
+    "source": "https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/cloudflare.svg",
+    "url": "https://www.cloudflare.com/developer-platform/products/workers-ai/",
+    "tagline": "Serverless GPU inference on Cloudflare's global edge network",
+    "facts": [
+      "Inference runs on GPUs spread across 180+ cities, close to users",
+      "Called from Workers, so the model sits next to your app logic",
+      "Pairs with Cloudflare's AI Gateway and Vectorize for caching and retrieval"
+    ]
+  },
+  "subconscious": {
+    "file": "subconscious.svg",
+    "primary": "#FF5C28",
+    "secondary": "#FFFFFF",
+    "ink": "#ffffff",
+    "mono": true,
+    "source": "local: marketing/public/icons/Subconscious_Logo_Graphic.svg",
+    "url": "https://www.subconscious.dev",
+    "tagline": "Inference for long-running agents with 200k+ token sessions",
+    "facts": [
+      "Built for long-running agents, with sessions past 200k tokens",
+      "Marathon versions of GLM-5.3 and DeepSeek V4.1 tuned for long agent runs",
+      "Spun out of MIT research; OpenAI- and Anthropic-compatible API"
+    ]
+  },
+  "morph": {
+    "file": "morph.svg",
+    "primary": "#99D52A",
+    "secondary": "#000000",
+    "ink": "#111111",
+    "mono": true,
+    "source": "https://cdn.jsdelivr.net/npm/@lobehub/icons-static-svg@latest/icons/morph-color.svg",
+    "url": "https://morphllm.com",
+    "tagline": "Fast Apply code-edit models and inference for coding agents",
+    "facts": [
+      "Specialized models for coding agents, not general chat",
+      "Fast Apply merges LLM code edits at 4,500+ tok/s",
+      "Also offers WarpGrep code search and Compact context tools"
+    ]
+  },
+  "cohere": {
+    "file": "cohere.svg",
+    "primary": "#39594D",
+    "secondary": "#FF7759",
+    "ink": "#ffffff",
+    "mono": true,
+    "source": "https://cdn.jsdelivr.net/npm/@lobehub/icons-static-svg@latest/icons/cohere.svg",
+    "url": "https://cohere.com",
+    "tagline": "Enterprise and sovereign AI models (Command) and the North platform",
+    "facts": [
+      "Enterprise-first: models built for retrieval, tool use and business data",
+      "Deploys privately in your cloud or on-prem, including sovereign setups",
+      "Its Embed and Rerank models are widely used in search pipelines"
+    ]
+  },
+  "stepfun": {
+    "file": "stepfun.svg",
+    "primary": "#0160FF",
+    "secondary": "#01A9FF",
+    "ink": "#ffffff",
+    "mono": true,
+    "source": "https://cdn.jsdelivr.net/npm/@lobehub/icons-static-svg@latest/icons/stepfun.svg",
+    "url": "https://stepfun.ai",
+    "tagline": "Shanghai lab building the Step family of foundation models",
+    "facts": [
+      "Step models from a Shanghai lab, strong on multimodal and reasoning",
+      "Served through the StepFun Open Platform"
+    ]
+  },
+  "infron": {
+    "file": "infron.png",
+    "primary": "#00378A",
+    "secondary": "#9A86F0",
+    "ink": "#ffffff",
+    "mono": true,
+    "source": "https://framerusercontent.com/images/jYZGKXX6mcMkU1qAXZQeevZRY.png (white bg removed)",
+    "url": "https://infron.ai",
+    "tagline": "Unified API gateway to hundreds of AI models",
+    "facts": [
+      "Provider routing picks which host serves each request",
+      "Passes through provider pricing with no markup, and supports your own keys"
+    ]
+  },
+  "dolphin": {
+    "file": "dolphin.png",
+    "primary": "#6383F2",
+    "secondary": "#FFFFFF",
+    "ink": "#ffffff",
+    "mono": true,
+    "source": "https://dphn.ai/favicon/favicon.svg (circle keyed out to alpha)",
+    "url": "https://dphn.ai",
+    "tagline": "Uncensored Dolphin models served on a network of distributed consumer GPUs",
+    "facts": [
+      "Serves the uncensored Dolphin models",
+      "Runs on a decentralized network of idle consumer GPUs instead of data centers"
+    ]
+  },
+  "parasail": {
+    "file": "parasail.svg",
+    "primary": "#121315",
+    "secondary": "#FFF6ED",
+    "ink": "#ffffff",
+    "mono": true,
+    "source": "https://cdn.jsdelivr.net/npm/@lobehub/icons-static-svg@latest/icons/parasail.svg",
+    "url": "https://www.parasail.io",
+    "tagline": "Pay-per-token inference cloud for open models",
+    "facts": [
+      "Owns no GPUs: rents across providers and passes on the savings",
+      "Pay-per-token open models plus dedicated deployments",
+      "Founded by Groq and Mythic veterans"
+    ]
+  },
+  "venice": {
+    "file": "venice.svg",
+    "primary": "#E05A2D",
+    "secondary": "#FFFFFF",
+    "ink": "#111111",
+    "mono": true,
+    "source": "https://cdn.jsdelivr.net/npm/@lobehub/icons-static-svg@latest/icons/venice-color.svg",
+    "url": "https://venice.ai",
+    "tagline": "Private, uncensored AI platform on open-source models",
+    "facts": [
+      "Privacy-first: no stored conversations",
+      "Uncensored open models for text, images and video",
+      "Stake the VVV token to get API access instead of paying per token"
+    ]
+  },
+  "refuseless": {
+    "file": "refuseless.png",
+    "primary": "#C81028",
+    "secondary": "#FFFFFF",
+    "ink": "#ffffff",
+    "mono": true,
+    "source": "https://refuseless.com/favicon.ico (48px, alpha, upscaled 4x)",
+    "url": "https://refuseless.com",
+    "tagline": "API for uncensored, abliterated open models",
+    "facts": [
+      "Abliterated open models with refusals removed",
+      "Drop-in OpenAI-compatible API, supported in LiteLLM"
+    ]
+  },
+  "elevenlabs": {
+    "file": "elevenlabs.svg",
+    "primary": "#000000",
+    "secondary": "#FFFFFF",
+    "ink": "#ffffff",
+    "mono": true,
+    "source": "https://cdn.jsdelivr.net/npm/@lobehub/icons-static-svg@latest/icons/elevenlabs.svg",
+    "url": "https://elevenlabs.io",
+    "tagline": "Voice AI: text-to-speech, speech-to-text and voice agents",
+    "facts": [
+      "Voice, not text: lifelike text-to-speech, speech-to-text and voice agents",
+      "17,500+ voices in 90+ languages, plus voice cloning",
+      "A top choice for realtime voice agents"
+    ]
+  },
+  "fal": {
+    "file": "fal.svg",
+    "primary": "#F47CC0",
+    "secondary": "#ADFF00",
+    "ink": "#111111",
+    "mono": true,
+    "source": "https://cdn.jsdelivr.net/npm/@lobehub/icons-static-svg@latest/icons/fal.svg",
+    "url": "https://fal.ai",
+    "tagline": "Inference platform for generative media: image, video and audio models",
+    "facts": [
+      "Generative media only: images, video, audio and 3D",
+      "1,000+ media models, often available the day they launch",
+      "Its own inference engine tuned for diffusion models"
+    ]
+  },
+  "anthropic": {
+    "file": "anthropic.svg",
+    "primary": "#D97757",
+    "secondary": "#141413",
+    "ink": "#111111",
+    "mono": true,
+    "source": "https://cdn.jsdelivr.net/npm/@lobehub/icons-static-svg@latest/icons/anthropic.svg",
+    "url": "https://www.anthropic.com",
+    "tagline": "AI safety lab building the Claude model family",
+    "facts": [
+      "Serves the Claude models: Opus, Sonnet and Haiku",
+      "Known for coding and agentic work; Claude Code runs on it",
+      "Also available through Amazon Bedrock and Google Vertex AI"
+    ]
+  },
+  "sambanova": {
+    "file": "sambanova.svg",
+    "primary": "#EE7624",
+    "secondary": "#FDB913",
+    "ink": "#111111",
+    "mono": true,
+    "source": "https://cdn.jsdelivr.net/npm/@lobehub/icons-static-svg@latest/icons/sambanova-color.svg",
+    "url": "https://sambanova.ai",
+    "tagline": "Fast inference on custom RDU chips",
+    "facts": [
+      "Runs models on its own RDU dataflow chips, not GPUs",
+      "Fits very large models like full DeepSeek on few machines",
+      "Fast open-model inference through SambaNova Cloud"
+    ]
+  },
+  "boundless": {
+    "file": "boundless.svg",
+    "primary": "#000000",
+    "secondary": "#FFFFFF",
+    "ink": "#ffffff",
+    "mono": true,
+    "source": "https://boundless.network/icon.svg",
+    "url": "https://boundless.network",
+    "tagline": "Reserved, tuned inference capacity for open models",
+    "facts": [
+      "Reserved, tuned capacity for open models rather than shared serverless",
+      "Runs on a ~4,000-GPU distributed network repurposed from zero-knowledge proving"
+    ]
+  },
+  "runinfra": {
+    "file": "runinfra.svg",
+    "primary": "#76B900",
+    "secondary": "#FFFFFF",
+    "ink": "#111111",
+    "mono": true,
+    "source": "https://runinfra.ai/icon.svg (tile removed)",
+    "url": "https://runinfra.ai",
+    "tagline": "Agent that benchmarks and deploys open-model inference stacks",
+    "facts": [
+      "An agent picks the stack: it benchmarks engines and configs, then deploys the winner",
+      "OpenAI- and Anthropic-compatible APIs with simple $1 credits"
+    ]
+  },
+  "particle": {
+    "file": "particle.svg",
+    "primary": "#00F7FF",
+    "secondary": "#E86000",
+    "ink": "#111111",
+    "mono": true,
+    "source": "particle.ai inline SVG mark (recoloured mono)",
+    "url": "https://particle.ai",
+    "tagline": "Low-cost inference for open-weight models with 1M-token context",
+    "facts": [
+      "Particle-1, post-trained from DeepSeek V4.1 Flash, with 1M-token context",
+      "Cheap: $0.25/M input and $1.00/M output"
+    ]
+  },
+  "huggingface": {
+    "file": "huggingface-color.svg",
+    "primary": "#FFD21E",
+    "secondary": "#FF9D0B",
+    "ink": "#111111",
+    "mono": false,
+    "source": "https://huggingface.co/front/assets/huggingface_logo-noborder.svg (official)",
+    "url": "https://huggingface.co",
+    "tagline": "Open-source model hub with routed inference providers",
+    "facts": [
+      "Home of open models: the Hub hosts nearly every open-weight release",
+      "Inference Providers routes one API to many partner hosts",
+      "Pick a model on the Hub and run it there in a click"
+    ],
+    "fill": "#232838",
+    "fillDark": "#232838"
+  },
+  "fireworks": {
+    "file": "fireworks.svg",
+    "primary": "#5019C5",
+    "secondary": "#FFFFFF",
+    "ink": "#ffffff",
+    "mono": true,
+    "source": "https://cdn.jsdelivr.net/npm/@lobehub/icons-static-svg@latest/icons/fireworks-color.svg",
+    "url": "https://fireworks.ai",
+    "tagline": "Inference and fine-tuning platform for open models",
+    "facts": [
+      "Built by the team behind PyTorch at Meta",
+      "Its own serving engine for fast open-model inference",
+      "Fine-tune, then serve the result on the same platform"
+    ]
+  },
+  "sail": {
+    "file": "sail.svg",
+    "primary": "#2C4681",
+    "secondary": "#FFFFFF",
+    "ink": "#ffffff",
+    "mono": true,
+    "source": "sailresearch.com header logo inline SVG (mark only, wordmark cropped)",
+    "url": "https://www.sailresearch.com",
+    "tagline": "Open-model API with completion windows that trade latency for lower prices",
+    "facts": [
+      "Completion windows: wait longer, pay less",
+      "Built for batch and latency-tolerant work like evals and data pipelines"
+    ]
+  },
+  "relace": {
+    "file": "relace.svg",
+    "primary": "#FCAA2D",
+    "secondary": "#000000",
+    "ink": "#111111",
+    "mono": true,
+    "source": "https://cdn.jsdelivr.net/npm/@lobehub/icons-static-svg@latest/icons/relace.svg",
+    "url": "https://relace.ai",
+    "tagline": "Open-model inference and apply models for coding agents",
+    "facts": [
+      "Models made for coding agents: apply, embeddings and reranking",
+      "Turns an LLM's edit into a merged file quickly and reliably"
+    ]
+  },
+  "luminal": {
+    "file": "luminal-color.svg",
+    "primary": "#2FAA6E",
+    "secondary": "#1A5C3A",
+    "ink": "#111111",
+    "mono": false,
+    "source": "https://www.luminal.com/icon.svg (official mark and colors)",
+    "url": "https://luminal.com",
+    "tagline": "ML compiler that turns models into optimized native GPU and ASIC code",
+    "facts": [
+      "A compiler, not just a host: turns models into optimized native GPU and ASIC code",
+      "Open source, written in Rust (Apache 2.0)"
+    ],
+    "fill": "#0D1F17",
+    "fillDark": "#0D1F17"
+  },
+  "suno": {
+    "file": "suno.svg",
+    "primary": "#000000",
+    "secondary": "#FFFFFF",
+    "ink": "#ffffff",
+    "mono": true,
+    "source": "https://cdn.jsdelivr.net/npm/@lobehub/icons-static-svg@latest/icons/suno.svg",
+    "url": "https://suno.com",
+    "tagline": "AI music generation from text prompts",
+    "facts": [
+      "Music, not text: full songs with vocals from a prompt",
+      "The best-known AI music generator"
+    ]
+  },
+  "xai": {
+    "file": "xai.svg",
+    "primary": "#000000",
+    "secondary": "#FFFFFF",
+    "ink": "#ffffff",
+    "mono": true,
+    "source": "https://cdn.jsdelivr.net/npm/@lobehub/icons-static-svg@latest/icons/xai.svg",
+    "url": "https://x.ai",
+    "tagline": "AI lab behind the Grok models, now part of SpaceX",
+    "facts": [
+      "Serves the Grok models, with live data from X",
+      "Trains on Colossus in Memphis, one of the largest GPU clusters",
+      "Part of SpaceX since February 2026"
+    ]
+  },
+  "cerebras": {
+    "file": "cerebras.svg",
+    "primary": "#F15A29",
+    "secondary": "#FFFFFF",
+    "ink": "#111111",
+    "mono": true,
+    "source": "https://cdn.jsdelivr.net/npm/@lobehub/icons-static-svg@latest/icons/cerebras-color.svg",
+    "url": "https://www.cerebras.ai",
+    "tagline": "Wafer-scale chips powering very fast inference",
+    "facts": [
+      "Wafer-scale chips: one processor the size of a whole wafer",
+      "Among the fastest tokens per second for open models",
+      "Keeps model weights in on-chip memory, avoiding the GPU memory bottleneck"
+    ]
+  },
+  "together": {
+    "file": "together.svg",
+    "primary": "#1D2E40",
+    "secondary": "#FC4C02",
+    "ink": "#ffffff",
+    "mono": false,
+    "source": "together.ai touch icon colors + lobehub geometry",
+    "url": "https://www.together.ai",
+    "tagline": "AI native cloud for open-model inference, fine-tuning and GPUs",
+    "facts": [
+      "Research-driven: home of FlashAttention, with Tri Dao as chief scientist",
+      "Serverless, dedicated, fine-tuning and raw GPU clusters in one place",
+      "A broad catalog of open models, often added on release day"
+    ]
+  },
+  "bedrock": {
+    "file": "bedrock.svg",
+    "primary": "#FF9900",
+    "secondary": "#232F3E",
+    "ink": "#111111",
+    "mono": true,
+    "source": "https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/amazonwebservices.svg",
+    "url": "https://aws.amazon.com/bedrock/",
+    "tagline": "AWS managed service for foundation models and agents",
+    "facts": [
+      "Models from many labs inside your AWS account and its security rules",
+      "Claude, Llama, Mistral and Amazon Nova behind one AWS API",
+      "Adds Guardrails, Knowledge Bases and AgentCore for enterprise apps"
+    ]
+  },
+  "google": {
+    "file": "google-color.svg",
+    "primary": "#111111",
+    "secondary": "#4285F4",
+    "ink": "#111111",
+    "mono": false,
+    "source": "Google brand \"G\" mark (official four colors)",
+    "url": "https://ai.google.dev",
+    "tagline": "Google's Gemini API and Vertex AI model serving",
+    "facts": [
+      "Runs on its own TPUs, not NVIDIA GPUs",
+      "Serves Gemini and the open Gemma models",
+      "Long context, plus native image, audio and video input"
+    ]
+  },
+  "typesafe": {
+    "file": "typesafe.png",
+    "primary": "#E050B8",
+    "secondary": "#101010",
+    "ink": "#111111",
+    "mono": true,
+    "source": "https://framerusercontent.com/images/aNFzSFxM4fjICmnibw7npfZjcQ.png (circle keyed out to alpha)",
+    "url": "https://typesafe.ai",
+    "tagline": "Decision models for software that report calibrated confidence",
+    "facts": [
+      "Decision models that report calibrated confidence, not just answers",
+      "Built for software that needs to know when to trust a model's call"
+    ]
+  },
+  "nebius": {
+    "file": "nebius.svg",
+    "primary": "#DAFF33",
+    "secondary": "#052B42",
+    "ink": "#052B42",
+    "mono": true,
+    "source": "https://nebius.com/favicon/favicon.svg (official mark and colors)",
+    "url": "https://nebius.com",
+    "tagline": "Full-stack AI cloud with GPU clusters and Token Factory inference",
+    "facts": [
+      "Designs its own servers and runs its own data centers in Europe and the US",
+      "Listed on Nasdaq (NBIS) after spinning out of Yandex",
+      "Serve open models or your own fine-tunes on dedicated capacity"
+    ]
+  },
+  "inferencenet": {
+    "file": "inferencenet-color.svg",
+    "primary": "#111111",
+    "secondary": "#F5F5F5",
+    "ink": "#ffffff",
+    "mono": false,
+    "source": "inference.net site wordmark (colored bars)",
+    "url": "https://inference.net",
+    "tagline": "Inference infrastructure and custom model training for AI-native teams",
+    "facts": [
+      "Cheap batch inference on spare GPU capacity",
+      "Trains custom models for AI-native teams, then serves them",
+      "Started as Kuzco, a distributed GPU network"
+    ]
+  },
+  "coreweave": {
+    "file": "coreweave.png",
+    "primary": "#2741E7",
+    "secondary": "#02030B",
+    "ink": "#ffffff",
+    "mono": true,
+    "source": "coreweave.com apple-touch-icon (alpha silhouette)",
+    "url": "https://www.coreweave.com",
+    "tagline": "AI cloud built on NVIDIA GPU clusters, with open-model serving through W&B Inference",
+    "facts": [
+      "The GPU cloud the big labs rent: huge NVIDIA clusters built for AI",
+      "Serves open models through W&B Inference, from the Weights & Biases acquisition",
+      "Training, tracking and inference in one place"
+    ]
+  }
+}
