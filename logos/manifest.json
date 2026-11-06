@@ -590,18 +590,24 @@
     "fillDark": "#0D1F17"
   },
   "suno": {
-    "file": "suno.svg",
-    "primary": "#000000",
-    "secondary": "#FFFFFF",
+    "file": "suno-wordmark.png",
+    "primary": "#FF4B22",
+    "secondary": "#FFB020",
     "ink": "#ffffff",
     "mono": true,
-    "source": "https://cdn.jsdelivr.net/npm/@lobehub/icons-static-svg@latest/icons/suno.svg",
+    "source": "https://cdn-o.suno.com/favicon-512x512.png (wordmark extracted) + brand gradient",
     "url": "https://suno.com",
     "tagline": "AI music generation from text prompts",
     "facts": [
       "Music, not text: full songs with vocals from a prompt",
       "The best-known AI music generator"
-    ]
+    ],
+    "badgeFile": "suno.svg",
+    "fill": "url(#g-suno)",
+    "fillDark": "url(#g-suno)",
+    "fillCss": "linear-gradient(90deg,#FF3D8A,#FF4B22 40%,#FF7A18 75%,#FFB020)",
+    "aspect": 3.81,
+    "logoWidth": 52
   },
   "xai": {
     "file": "xai.svg",

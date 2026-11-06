@@ -9,7 +9,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=16">
+  <link rel="stylesheet" href="styles.css?v=17">
 </head>
 <body>
   <header class="top">
@@ -21,6 +21,15 @@
   <main class="stage" id="stage">
     <div class="map" id="map">
       <svg id="svg" viewBox="0 0 975 610" role="group" aria-label="Map of the United States">
+        <defs>
+          <!-- Suno's brand gradient -->
+          <linearGradient id="g-suno" x1="0" y1="0" x2="1" y2="0">
+            <stop offset="0" stop-color="#FF3D8A"/>
+            <stop offset="0.4" stop-color="#FF4B22"/>
+            <stop offset="0.75" stop-color="#FF7A18"/>
+            <stop offset="1" stop-color="#FFB020"/>
+          </linearGradient>
+        </defs>
         <g id="states"></g>
         <g id="lift" aria-hidden="true"></g>
       </svg>
@@ -50,6 +59,6 @@
 
   <a class="credit" href="https://subconscious.dev" target="_blank" rel="noopener">created by Subconscious</a>
 
-  <script type="module" src="app.js?v=16"></script>
+  <script type="module" src="app.js?v=17"></script>
 </body>
 </html>

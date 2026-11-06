@@ -91,10 +91,11 @@ function colorsFor(p) {
   // ink: the color a mono logo is drawn in on top of the fill
   const ink = p.ink || (L > 0.4 ? "#111113" : "#ffffff");
   // keep near-white fills visible on the light page and near-black fills visible on the dark page
-  if (p.fill) return { fill: p.fill, fillDark: p.fillDark || p.fill, ink };
+  // fillCss: the same fill as a CSS background (a gradient fill is an SVG url() the card can't use)
+  if (p.fill) return { fill: p.fill, fillDark: p.fillDark || p.fill, fillCss: p.fillCss || p.fill, ink };
   const fill = L > 0.88 ? p.secondary && luminance(p.secondary) < 0.88 ? p.secondary : "#e6e6e3" : primary;
   const fillDark = L < 0.03 ? "#2a2a2e" : fill;
-  return { fill, fillDark, ink };
+  return { fill, fillDark, fillCss: fill, ink };
 }
 
 /* ---------- build ---------- */
@@ -107,7 +108,7 @@ for (const s of STATES) {
   if (!a) continue;
   const [pid, pname, why] = a;
   const p = manifest[pid] || {};
-  const { fill, fillDark, ink } = colorsFor(p);
+  const { fill, fillDark, fillCss, ink } = colorsFor(p);
   const delay = Math.round((s.cx / W) * 420 + (s.cy / H) * 120);
 
   const path = document.createElementNS(NS, "path");
@@ -127,13 +128,15 @@ for (const s of STATES) {
   logo.className = "logo";
   logo.style.left = `${(s.cx / W) * 100}%`;
   logo.style.top = `${(s.cy / H) * 100}%`;
-  logo.style.width = `${(size / W) * 100}%`;
+  // wide wordmarks set their own width (in map units) and aspect ratio
+  logo.style.width = `${((p.logoWidth || size) / W) * 100}%`;
+  if (p.aspect) logo.style.aspectRatio = p.aspect;
   logo.style.setProperty("--d", `${delay}ms`);
   if (p.file) logo.appendChild(logoNode(p, ink, pname));
   logosEl.appendChild(logo);
 
   const lift = 1 + Math.min(0.16, 2.4 / s.r);
-  byName.set(s.name, { s, pid, pname, why, p, fill, fillDark, ink, path, logo, lift, size });
+  byName.set(s.name, { s, pid, pname, why, p, fill, fillDark, fillCss, ink, path, logo, lift, size });
 
   path.addEventListener("click", () => select(s.name));
   path.addEventListener("keydown", (e) => {
@@ -151,12 +154,12 @@ function logoNode(p, ink, alt) {
   if (p.mono) {
     const g = document.createElement("div");
     g.className = "glyph";
-    g.style.setProperty("--src", `url("logos/${p.file}?v=16")`);
+    g.style.setProperty("--src", `url("logos/${p.file}?v=17")`);
     g.style.setProperty("--ink", ink);
     return g;
   }
   const img = document.createElement("img");
-  img.src = `logos/${p.file}?v=16`;
+  img.src = `logos/${p.file}?v=17`;
   img.alt = alt;
   img.decoding = "async";
   img.draggable = false;
@@ -343,8 +346,8 @@ function contentHTML(v) {
   let badge = "";
   if (p.file) {
     badge = p.mono
-      ? `<div class="p-badge" style="--fill:${v.fill}"><div class="glyph" style="--src:url('logos/${esc(p.file)}?v=8');--ink:${v.ink}"></div></div>`
-      : `<div class="p-badge" style="--fill:${v.fill}"><img src="logos/${esc(p.file)}?v=16" alt=""></div>`;
+      ? `<div class="p-badge" style="--fill:${v.fillCss}"><div class="glyph" style="--src:url('logos/${esc(p.badgeFile || p.file)}?v=17');--ink:${v.ink}"></div></div>`
+      : `<div class="p-badge" style="--fill:${v.fillCss}"><img src="logos/${esc(p.badgeFile || p.file)}?v=17" alt=""></div>`;
   }
   return `
     <p class="p-state">${esc(v.s.name)}</p>
@@ -357,7 +360,7 @@ function moreHTML(v) {
   const { p } = v;
   const facts = Array.isArray(p.facts) && p.facts.length ? `<ul>${p.facts.map((f) => `<li>${esc(f)}</li>`).join("")}</ul>` : "";
   if (!p.tagline && !facts && !p.url) return "";
-  return `<div class="p-more" style="--fill-dot:${v.fill}">
+  return `<div class="p-more" style="--fill-dot:${v.fillCss}">
       ${p.tagline ? `<p>${esc(p.tagline)}</p>` : ""}
       ${facts}
       ${p.url ? `<a class="p-link" href="${esc(p.url)}" target="_blank" rel="noopener">${esc(host(p.url))}<svg width="10" height="10" viewBox="0 0 10 10" aria-hidden="true"><path d="M3 1h6v6M9 1L1 9" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></a>` : ""}
@@ -366,10 +369,10 @@ function moreHTML(v) {
 
 function swatchHTML(v) {
   const { p } = v;
-  if (!p.file) return `<span class="swatch" style="--fill:${v.fill}"></span>`;
+  if (!p.file) return `<span class="swatch" style="--fill:${v.fillCss}"></span>`;
   return p.mono
-    ? `<span class="swatch" style="--fill:${v.fill}"><span class="glyph" style="--src:url('logos/${esc(p.file)}?v=8');--ink:${v.ink}"></span></span>`
-    : `<span class="swatch" style="--fill:${v.fill}"><img src="logos/${esc(p.file)}?v=16" alt=""></span>`;
+    ? `<span class="swatch" style="--fill:${v.fillCss}"><span class="glyph" style="--src:url('logos/${esc(p.badgeFile || p.file)}?v=17');--ink:${v.ink}"></span></span>`
+    : `<span class="swatch" style="--fill:${v.fillCss}"><img src="logos/${esc(p.badgeFile || p.file)}?v=17" alt=""></span>`;
 }
 
 let swapAnim = null;
