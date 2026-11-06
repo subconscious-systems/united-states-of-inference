@@ -113,6 +113,17 @@ body {
     transition: opacity 200ms var(--ease-out) 300ms, transform 200ms var(--ease-out) 300ms;
   }
 }
+/* one line under the title: what the map is (and isn't) */
+.heading { min-width: 0; }
+.subtitle {
+  margin: 2px 0 0;
+  font-size: 13px;
+  color: var(--muted);
+}
+/* arrives with the info icon, once the title has streamed in */
+.subtitle:not(.ready) { opacity: 0; transform: translateY(-2px); }
+.subtitle.ready { transition: opacity 400ms var(--ease-out), transform 400ms var(--ease-out); }
+
 /* the info icon after the title */
 .info {
   display: grid;
@@ -160,6 +171,8 @@ body {
 @keyframes caret { 50% { opacity: 0; } }
 
 .pill {
+  flex-shrink: 0;
+  white-space: nowrap;
   height: 32px;
   padding: 0 14px;
   border: 0;
@@ -200,13 +213,13 @@ body {
   min-height: 0;
   display: grid;
   place-items: center;
-  padding: 12px var(--gutter) 60px; /* equal to the header above, so the map sits centered and the credit has room */
+  padding: 12px var(--gutter) 64px; /* about the header’s height, so the map sits centered and the credit has room */
 }
 
 .map {
   position: relative;
   /* fit 975×610 inside the stage on both axes */
-  width: min(100%, calc((100dvh - 120px) * 975 / 610));
+  width: min(100%, calc((100dvh - 140px) * 975 / 610));
   aspect-ratio: 975 / 610;
   transform-origin: 0 50%;
   transition: transform 320ms var(--ease-in-out);
@@ -715,6 +728,7 @@ body {
   .tok { filter: none; }
   .about { transform: none !important; }
   .search-box, .search.open .search-box { transform: none; }
+  .subtitle { transform: none !important; }
   .all-sheet, .all.open .all-sheet { transform: none; }
   .all.open .row { animation-name: fade-in; }
   #lift path, #lift path.up, .logo.selected, .logo.hover { transform: none; transition: opacity 160ms ease; }

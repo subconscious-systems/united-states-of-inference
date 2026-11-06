@@ -11,7 +11,7 @@ const root = join(dirname(fileURLToPath(import.meta.url)), "..");
 const SITE = "https://subconscious-systems.github.io/united-states-of-inference/";
 const TITLE = "The United States of Inference";
 const DESCRIPTION =
-  "There are so many inference providers. How do you tell them apart? A map that gives each of 50 AI inference providers a US state based on its vibe, with what makes each one different.";
+  "There are so many inference providers. How do you tell them apart? A map that gives each of 50 AI inference providers the US state it is most like (not where it is based), with what makes each one different.";
 
 const { ASSIGNMENTS } = await import(join(root, "data.js"));
 const manifest = JSON.parse(readFileSync(join(root, "logos/manifest.json"), "utf8"));
@@ -96,7 +96,7 @@ const llms = `# ${TITLE}
 
 > ${DESCRIPTION}
 
-Made by Subconscious (https://subconscious.dev). Each state is matched to one AI inference provider, with a one-line reason and the things that set that provider apart. Link to a state with ${SITE}#<state-name>, for example ${SITE}#texas.
+Made by Subconscious (https://subconscious.dev). Each state is matched to one AI inference provider, with a one-line reason and the things that set that provider apart. The match is about character, not location: a provider gets the state it is most like (its ethos, what it is known for, what it does), not the state where it is headquartered. Link to a state with ${SITE}#<state-name>, for example ${SITE}#texas.
 
 ## States
 

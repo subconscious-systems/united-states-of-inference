@@ -36,6 +36,7 @@ const isSheet = () => innerWidth <= 760;
   if (reduceMotion.matches) {
     spans.forEach((s) => s.classList.add("on"));
     info.classList.add("ready");
+    $("subtitle").classList.add("ready");
     return;
   }
   // a caret "thinks" first, then follows each token as it lands
@@ -50,6 +51,7 @@ const isSheet = () => innerWidth <= 760;
       caret.style.left = `${s.offsetLeft + s.offsetWidth}px`;
       if (i === spans.length - 1) {
         setTimeout(() => info.classList.add("ready"), 260);
+        setTimeout(() => $("subtitle").classList.add("ready"), 380);
         setTimeout(() => caret.classList.add("done"), 1600);
       }
     }, t);
