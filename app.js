@@ -292,6 +292,7 @@ function close() {
   panel.setAttribute("aria-hidden", "true");
   panel.style.removeProperty("--drag");
   mapEl.style.transform = "";
+  if (zoomRegion !== "all") applyZoom();
   history.replaceState(null, "", location.pathname + location.search);
 }
 
@@ -311,6 +312,11 @@ function makeRoom() {
   const top = sr.top + mapEl.offsetTop;
   const m = { left, top, width: mapEl.offsetWidth, height: mapEl.offsetHeight, right: left + mapEl.offsetWidth, bottom: top + mapEl.offsetHeight };
   const gutter = isSheet() ? 16 : 24;
+  if (isSheet() && zoomRegion !== "all") {
+    mapEl.style.transform = "";
+    applyZoom();
+    return;
+  }
   if (isSheet()) {
     const sheetTop = innerHeight - panel.offsetHeight - 8;
     const headerBottom = 60; // don't push the map under the title
@@ -428,7 +434,7 @@ $("close").addEventListener("click", close);
 
 document.addEventListener("pointerdown", (e) => {
   if (!current) return;
-  if (panel.contains(e.target) || e.target.closest?.(".state")) return;
+  if (panel.contains(e.target) || e.target.closest?.(".state, .zoom-ctl")) return;
   close();
 });
 
@@ -652,11 +658,65 @@ $("next").addEventListener("click", () => step(1));
 })();
 
 addEventListener("resize", () => {
+  applyZoom();
   if (!current) return;
   mapEl.style.transition = "none";
   makeRoom();
   mapEl.getBoundingClientRect();
   mapEl.style.transition = "";
+});
+
+/* ---------- phones: zoom into a region ---------- */
+
+const REGIONS = {
+  northeast: ["Maine", "New Hampshire", "Vermont", "Massachusetts", "Rhode Island", "Connecticut", "New York", "New Jersey", "Pennsylvania", "Delaware", "Maryland"],
+};
+const zoomEl = $("zoom");
+const stageEl = $("stage");
+const zoomCtl = document.querySelector(".zoom-ctl");
+let zoomRegion = "all";
+
+function regionBox(name) {
+  let x0 = Infinity, y0 = Infinity, x1 = -Infinity, y1 = -Infinity;
+  for (const n of REGIONS[name]) {
+    const b = byName.get(n).path.getBBox();
+    x0 = Math.min(x0, b.x); y0 = Math.min(y0, b.y);
+    x1 = Math.max(x1, b.x + b.width); y1 = Math.max(y1, b.y + b.height);
+  }
+  return { x: x0, y: y0, w: x1 - x0, h: y1 - y0 };
+}
+
+// scale and move the drawing so the region fills the space between the toggle and the bottom (or the open sheet)
+function applyZoom() {
+  if (zoomRegion === "all" || !isSheet()) {
+    zoomEl.style.transform = "";
+    stageEl.classList.remove("zoomed");
+    return;
+  }
+  stageEl.classList.add("zoomed");
+  const sr = stageEl.getBoundingClientRect();
+  const mapLeft = sr.left + mapEl.offsetLeft;
+  const mapTop = sr.top + mapEl.offsetTop;
+  const u = mapEl.offsetWidth / W; // px per map unit
+  const top = zoomCtl.getBoundingClientRect().bottom + 12;
+  const bottom = current ? innerHeight - panel.offsetHeight - 20 : sr.bottom - 12;
+  const left = sr.left + 12;
+  const right = sr.right - 12;
+  const r = regionBox(zoomRegion);
+  const k = Math.min(5, (right - left) / (r.w * u), (bottom - top) / (r.h * u));
+  const tx = (left + right) / 2 - mapLeft - k * (r.x + r.w / 2) * u;
+  const ty = (top + bottom) / 2 - mapTop - k * (r.y + r.h / 2) * u;
+  zoomEl.style.transform = `translate(${tx.toFixed(1)}px, ${ty.toFixed(1)}px) scale(${k.toFixed(3)})`;
+  stageEl.style.setProperty("--k", k.toFixed(3));
+}
+
+zoomCtl.addEventListener("click", (e) => {
+  const btn = e.target.closest(".zoom-btn");
+  if (!btn || btn.dataset.zoom === zoomRegion) return;
+  zoomRegion = btn.dataset.zoom;
+  zoomCtl.querySelectorAll(".zoom-btn").forEach((b) => b.setAttribute("aria-pressed", String(b === btn)));
+  if (current) makeRoom();
+  else applyZoom();
 });
 
 /* deep link: /#utah */

@@ -39,7 +39,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=24">
+  <link rel="stylesheet" href="styles.css?v=27">
 </head>
 <body>
   <header class="top">
@@ -57,7 +57,13 @@
   </header>
 
   <main class="stage" id="stage">
+    <!-- phones: zoom into the small northeastern states -->
+    <div class="zoom-ctl" role="group" aria-label="Map view">
+      <button class="zoom-btn" data-zoom="all" aria-pressed="true">All states</button>
+      <button class="zoom-btn" data-zoom="northeast" aria-pressed="false">Northeast</button>
+    </div>
     <div class="map" id="map">
+      <div class="zoom" id="zoom">
       <svg id="svg" viewBox="0 0 975 610" role="group" aria-label="Map of the United States">
         <defs>
           <!-- Suno's brand gradient -->
@@ -74,6 +80,7 @@
         <g id="lift" aria-hidden="true"></g>
       </svg>
       <div class="logos" id="logos" aria-hidden="true"></div>
+      </div>
     </div>
   </main>
 
@@ -174,6 +181,6 @@
 
   <a class="credit" href="https://subconscious.dev" target="_blank" rel="noopener">created by Subconscious</a>
 
-  <script type="module" src="app.js?v=26"></script>
+  <script type="module" src="app.js?v=29"></script>
 </body>
 </html>

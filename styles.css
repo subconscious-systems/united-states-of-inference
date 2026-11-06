@@ -226,6 +226,20 @@ body {
   will-change: transform;
 }
 
+/* holds the map drawing; transformed to zoom into a region on phones */
+.zoom {
+  position: absolute;
+  inset: 0;
+  transform-origin: 0 0;
+  transition: transform 450ms var(--ease-in-out);
+}
+.stage.zoomed { overflow: hidden; }
+/* borders stay a hairline instead of growing with the zoom (--k is the zoom factor) */
+.stage.zoomed .state { stroke-width: calc(1.2 / var(--k, 1)); }
+.stage.zoomed #lift path { stroke-width: calc(1.5 / var(--k, 1)); }
+
+.zoom-ctl { display: none; }
+
 .map svg {
   position: absolute;
   inset: 0;
@@ -677,6 +691,35 @@ body {
   .map { width: 100%; }
   .stage { align-items: center; }
 
+  .zoom-ctl {
+    position: absolute;
+    z-index: 3;
+    top: 4px;
+    left: 50%;
+    translate: -50% 0;
+    display: flex;
+    padding: 2px;
+    border-radius: 8px;
+    background: var(--line);
+  }
+  .zoom-btn {
+    height: 30px;
+    padding: 0 14px;
+    border: 0;
+    border-radius: 6px;
+    background: transparent;
+    color: var(--muted);
+    font: inherit;
+    font-size: 13px;
+    font-weight: 500;
+    white-space: nowrap;
+    cursor: pointer;
+    transition: background-color 180ms ease, color 180ms ease, transform 120ms var(--ease-out);
+  }
+  .zoom-btn[aria-pressed="true"] { background: var(--card); color: var(--fg); box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2); }
+  .zoom-btn:active { transform: scale(0.96); }
+  .zoom-btn:focus-visible { outline: 2px solid var(--fg); outline-offset: 1px; }
+
   .panel {
     left: 8px;
     right: 8px;
@@ -729,6 +772,7 @@ body {
   .about { transform: none !important; }
   .search-box, .search.open .search-box { transform: none; }
   .subtitle { transform: none !important; }
+  .zoom { transition: none; }
   .all-sheet, .all.open .all-sheet { transform: none; }
   .all.open .row { animation-name: fade-in; }
   #lift path, #lift path.up, .logo.selected, .logo.hover { transform: none; transition: opacity 160ms ease; }
