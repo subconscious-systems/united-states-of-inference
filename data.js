@@ -20,7 +20,7 @@ export const ASSIGNMENTS = {
   "Louisiana": ["mistral", "Mistral", "Louisiana still speaks a little French, and so does Europe’s frontier lab."],
   "Maine": ["thinkingmachines", "Thinking Machines", "Mainers fix their own boats, plows and roofs. Thinking Machines built Tinker so you can fix up your own model without touching a GPU."],
   "Maryland": ["cloudflare", "Cloudflare Workers AI", "The NSA lives in Maryland. So does the company that sits in front of a big chunk of the internet."],
-  "Massachusetts": ["subconscious", "Subconscious", "Home of the original marathon, the Boston Marathon. Subconscious builds Marathon models that keep agents going for hours."],
+  "Massachusetts": ["subconscious", "Subconscious", "Home of the oldest modern marathon, the Boston Marathon. Subconscious builds Marathon models that keep agents going for hours."],
   "Michigan": ["morph", "Morph", "Michigan gave the world the moving assembly line, where each specialist does one job at blistering speed, and Morph applies that idea to code edits."],
   "Minnesota": ["cohere", "Cohere", "Minnesota is about as Canadian as America gets, and Cohere is the Toronto-born lab with impeccable manners toward enterprise buyers."],
   "Mississippi": ["stepfun", "StepFun", "The Ole Miss Rebels love picking fights with bigger SEC programs. StepFun is a startup picking fights with China’s tech giants."],

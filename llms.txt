@@ -285,7 +285,7 @@ On the map: https://subconscious-systems.github.io/united-states-of-inference/#m
 
 ### Massachusetts: Subconscious
 
-Home of the original marathon, the Boston Marathon. Subconscious builds Marathon models that keep agents going for hours.
+Home of the oldest modern marathon, the Boston Marathon. Subconscious builds Marathon models that keep agents going for hours.
 
 Inference for long-running agents with 200k+ token sessions.
 
