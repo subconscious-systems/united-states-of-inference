@@ -105,7 +105,7 @@ On the map: https://subconscious-systems.github.io/united-states-of-inference/#c
 
 ### Delaware: Modal
 
-Millions of drivers cross Delaware on I-95 without stopping, which is about how long Modal keeps a GPU running.
+Over a million companies call Delaware home without ever setting foot there. Modal runs your code on GPUs without you ever setting foot on a server.
 
 Serverless GPU cloud for running AI inference and sandboxes.
 

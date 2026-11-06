@@ -7,7 +7,7 @@ export const ASSIGNMENTS = {
   "California": ["openai", "OpenAI", "Most of what feels normal today got tried in California first. ChatGPT is how most of the world met AI."],
   "Colorado": ["baseten", "Baseten", "Every fourteener climb starts at base camp, and so does a lot of AI headed for production."],
   "Connecticut": ["together", "Together AI", "Hartford got rich getting everyone to pool their risk. Together started out as a decentralized cloud pooling GPUs."],
-  "Delaware": ["modal", "Modal", "Millions of drivers cross Delaware on I-95 without stopping, which is about how long Modal keeps a GPU running."],
+  "Delaware": ["modal", "Modal", "Over a million companies call Delaware home without ever setting foot there. Modal runs your code on GPUs without you ever setting foot on a server."],
   "Florida": ["meta", "Meta", "Nobody can predict Florida Man or Meta: Llama one year, Muse the next, a retired API in between. Your grandma probably thinks Muse is cute."],
   "Georgia": ["openrouter", "OpenRouter", "Atlanta’s Hartsfield-Jackson is the busiest airport in the country, and OpenRouter is where the AI industry changes planes."],
   "Hawaii": ["dolphin", "Dolphin", "Hawaii’s spinner dolphins swim wherever they want. Dolphin’s models say whatever they want, running on home GPUs scattered across a network."],
