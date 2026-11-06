@@ -51,17 +51,17 @@ const isSheet = () => innerWidth <= 760;
   });
 })();
 
-/* about card: tap the title on touch devices */
+/* about card: tap the info icon on touch devices */
 {
-  const title = $("title");
+  const info = $("info");
   const about = $("about");
-  title.addEventListener("click", (e) => {
+  info.addEventListener("click", (e) => {
     if (matchMedia("(hover: hover) and (pointer: fine)").matches) return;
     e.stopPropagation();
     about.classList.toggle("on");
   });
   document.addEventListener("pointerdown", (e) => {
-    if (e.target !== title && !title.contains(e.target)) about.classList.remove("on");
+    if (!info.contains(e.target)) about.classList.remove("on");
   });
 }
 
