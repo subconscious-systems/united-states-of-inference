@@ -434,7 +434,7 @@ On the map: https://subconscious-systems.github.io/united-states-of-inference/#n
 
 ### New York: Anthropic
 
-New York is where enterprise buyers sign the biggest checks, and Anthropic built its business winning them over.
+Midtown is where the biggest enterprise deals get signed. These days, a lot of them say Claude.
 
 AI safety lab building the Claude model family.
 
