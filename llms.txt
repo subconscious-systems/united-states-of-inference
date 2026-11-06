@@ -63,7 +63,7 @@ On the map: https://subconscious-systems.github.io/united-states-of-inference/#a
 
 ### California: OpenAI
 
-California turns its experiments into everyone else’s normal, and ChatGPT is how most of the planet met AI.
+Most of what feels normal today got tried in California first. ChatGPT is how most of the world met AI.
 
 Frontier lab behind the GPT models, ChatGPT and the OpenAI API.
 
@@ -636,7 +636,7 @@ On the map: https://subconscious-systems.github.io/united-states-of-inference/#v
 
 ### Washington: Google
 
-Washington is old tech money in a rain jacket, and Google is the established giant quietly running under everything.
+Seattle grows tech giants the way it grows moss. Google wrote the Transformer paper that every model on this map is built on.
 
 Google's Gemini API and Vertex AI model serving.
 
