@@ -47,7 +47,7 @@ export const ASSIGNMENTS = {
   "Vermont": ["gmicloud", "GMI Cloud", "Vermonters grow their own food and fix their own trucks. GMI Cloud owns the GPUs it runs on."],
   "Virginia": ["bedrock", "Amazon Bedrock", "Virginia is for lovers. It’s also for defense contractors and US-East-1. Amazon Bedrock embodies this great state."],
   "Washington": ["google", "Google", "Seattle grows tech giants the way it grows moss. Google wrote the Transformer paper that every model on this map is built on."],
-  "West Virginia": ["typesafe", "TypeSafe AI", "Mothman appears right before something goes wrong, and TypeSafe AI’s models tell you how confident they are before you act."],
+  "West Virginia": ["typesafe", "TypeSafe AI", "Jevons noticed that making coal cheaper to burn only made the world burn more of it, and West Virginia dug plenty. TypeSafe named its first model Jev, making the same bet on decisions."],
   "Wisconsin": ["nebius", "Nebius", "Wisconsin was built by European immigrants who showed up and got to work, and Nebius is the Amsterdam neocloud doing the same in American AI."],
   "Wyoming": ["inferencenet", "Inference.net", "With the smallest population in the country, Wyoming has room to spare, and Inference.net runs batch jobs on spare GPU capacity."],
 };

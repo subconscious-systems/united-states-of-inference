@@ -1,5 +1,5 @@
 import { STATES } from "./states.js?v=10";
-import { ASSIGNMENTS } from "./data.js?v=31";
+import { ASSIGNMENTS } from "./data.js?v=32";
 
 const W = 975;
 const H = 610;

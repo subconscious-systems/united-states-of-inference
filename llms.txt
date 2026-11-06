@@ -650,7 +650,7 @@ On the map: https://subconscious-systems.github.io/united-states-of-inference/#w
 
 ### West Virginia: TypeSafe AI
 
-Mothman appears right before something goes wrong, and TypeSafe AI’s models tell you how confident they are before you act.
+Jevons noticed that making coal cheaper to burn only made the world burn more of it, and West Virginia dug plenty. TypeSafe named its first model Jev, making the same bet on decisions.
 
 Decision models for software that report calibrated confidence.
 
