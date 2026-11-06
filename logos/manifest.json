@@ -258,10 +258,10 @@
     "mono": true,
     "source": "https://thinkingmachines.ai/images/apple-touch-icon.png (traced to SVG)",
     "url": "https://thinkingmachines.ai",
-    "tagline": "Mira Murati's research lab; Tinker API for fine-tuning open models",
+    "tagline": "Mira Murati’s research lab; Tinker API for fine-tuning and serving open models",
     "facts": [
-      "Doesn't serve a chat API: Tinker lets you fine-tune open models without managing GPUs",
-      "You write the training loop, it handles the distributed infrastructure",
+      "Fine-tune open models with Tinker, then run inference on them in the same place",
+      "You write the training loop, Tinker handles the distributed GPUs",
       "Research lab from former OpenAI CTO Mira Murati"
     ]
   },

@@ -259,10 +259,10 @@ On the map: https://subconscious-systems.github.io/united-states-of-inference/#l
 
 Mainers fix their own boats, plows and roofs. Thinking Machines built Tinker so you can fix up your own model without touching a GPU.
 
-Mira Murati's research lab; Tinker API for fine-tuning open models.
+Mira Murati’s research lab; Tinker API for fine-tuning and serving open models.
 
-- Doesn't serve a chat API: Tinker lets you fine-tune open models without managing GPUs
-- You write the training loop, it handles the distributed infrastructure
+- Fine-tune open models with Tinker, then run inference on them in the same place
+- You write the training loop, Tinker handles the distributed GPUs
 - Research lab from former OpenAI CTO Mira Murati
 
 Website: https://thinkingmachines.ai
