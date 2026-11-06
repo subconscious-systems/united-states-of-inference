@@ -31,8 +31,11 @@ const isSheet = () => innerWidth <= 760;
     el.appendChild(s);
     return s;
   });
+  // the info icon waits until the title has finished streaming in
+  const info = $("info");
   if (reduceMotion.matches) {
     spans.forEach((s) => s.classList.add("on"));
+    info.classList.add("ready");
     return;
   }
   // a caret "thinks" first, then follows each token as it lands
@@ -45,7 +48,10 @@ const isSheet = () => innerWidth <= 760;
     setTimeout(() => {
       s.classList.add("on");
       caret.style.left = `${s.offsetLeft + s.offsetWidth}px`;
-      if (i === spans.length - 1) setTimeout(() => caret.classList.add("done"), 1600);
+      if (i === spans.length - 1) {
+        setTimeout(() => info.classList.add("ready"), 260);
+        setTimeout(() => caret.classList.add("done"), 1600);
+      }
     }, t);
     t += 200 + Math.random() * 220 + (tokens[i + 1]?.startsWith(" ") ? 60 : 0);
   });
