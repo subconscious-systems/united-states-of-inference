@@ -34,7 +34,7 @@ export const ASSIGNMENTS = {
   "New York": ["anthropic", "Anthropic", "Midtown is where the biggest enterprise deals get signed. These days, a lot of them say Claude."],
   "North Carolina": ["sambanova", "SambaNova", "NASCAR country loves heavy machines moving at absurd speed, and SambaNova pushes giant open models fast on its own dataflow chips."],
   "North Dakota": ["boundless", "Boundless", "The prairie runs to the horizon in every direction, and Boundless tunes reserved capacity so you never hit the edge."],
-  "Ohio": ["runinfra", "RunInfra", "Columbus is where American companies test new products on the most average shoppers in the country, and RunInfra’s agent benchmarks your deployment before you ship it."],
+  "Ohio": ["runinfra", "RunInfra", "The Wright brothers tested about 200 wing shapes in a homemade wind tunnel in Dayton before they flew. RunInfra’s agent tests serving setups the same way before it deploys yours."],
   "Oklahoma": ["particle", "Particle.AI", "Oklahoma City invented the shopping cart so you could haul more for less effort. Particle hauls a million tokens for a quarter."],
   "Oregon": ["huggingface", "Hugging Face", "Portland’s motto is Keep Portland Weird, and Hugging Face is the open-source town square where AI’s weirdest projects live."],
   "Pennsylvania": ["fireworks", "Fireworks AI", "Philadelphia lit up the first Fourth of July with fireworks in 1777. They’ve been the main event ever since."],

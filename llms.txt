@@ -475,7 +475,7 @@ On the map: https://subconscious-systems.github.io/united-states-of-inference/#n
 
 ### Ohio: RunInfra
 
-Columbus is where American companies test new products on the most average shoppers in the country, and RunInfra’s agent benchmarks your deployment before you ship it.
+The Wright brothers tested about 200 wing shapes in a homemade wind tunnel in Dayton before they flew. RunInfra’s agent tests serving setups the same way before it deploys yours.
 
 Agent that benchmarks and deploys open-model inference stacks.
 
