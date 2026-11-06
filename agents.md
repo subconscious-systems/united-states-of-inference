@@ -46,10 +46,10 @@ Source: https://subconscious-systems.github.io/united-states-of-inference/ · Ma
 | New Hampshire | Refuseless | New Hampshire stamps Live Free or Die on every license plate, and Refuseless builds models that follow the motto. | https://refuseless.com |
 | New Jersey | ElevenLabs | Edison recorded the first human voice in Menlo Park. ElevenLabs can now fake yours. | https://elevenlabs.io |
 | New Mexico | fal | Santa Fe is one of the biggest art markets in the country and Albuquerque keeps film crews busy, a fitting home for fal and its thousand-plus generative media models. | https://fal.ai |
-| New York | Anthropic | Midtown is where the biggest enterprise deals get signed. These days, a lot of them say Claude. | https://www.anthropic.com |
+| New York | Anthropic | New York runs on enterprise contracts, from Wall Street banks to Midtown law firms. Anthropic makes most of its money selling Claude to businesses like them. | https://www.anthropic.com |
 | North Carolina | SambaNova | NASCAR country loves heavy machines moving at absurd speed, and SambaNova pushes giant open models fast on its own dataflow chips. | https://sambanova.ai |
 | North Dakota | Boundless | The prairie runs to the horizon in every direction, and Boundless tunes reserved capacity so you never hit the edge. | https://boundless.network |
-| Ohio | RunInfra | The Wright brothers tested about 200 wing shapes in a homemade wind tunnel in Dayton before they flew. RunInfra’s agent tests serving setups the same way before it deploys yours. | https://runinfra.ai |
+| Ohio | RunInfra | The Wright brothers tested 200 wing designs in their Dayton bike shop before they ever left the ground. RunInfra tests your serving setup before it ships. | https://runinfra.ai |
 | Oklahoma | Particle.AI | Oklahoma City invented the shopping cart so you could haul more for less effort. Particle hauls a million tokens for a quarter. | https://particle.ai |
 | Oregon | Hugging Face | Portland’s motto is Keep Portland Weird, and Hugging Face is the open-source town square where AI’s weirdest projects live. | https://huggingface.co |
 | Pennsylvania | Fireworks AI | Philadelphia lit up the first Fourth of July with fireworks in 1777. They’ve been the main event ever since. | https://fireworks.ai |
@@ -551,7 +551,7 @@ On the map: https://subconscious-systems.github.io/united-states-of-inference/#n
 
 ### Anthropic (New York)
 
-Midtown is where the biggest enterprise deals get signed. These days, a lot of them say Claude.
+New York runs on enterprise contracts, from Wall Street banks to Midtown law firms. Anthropic makes most of its money selling Claude to businesses like them.
 
 AI safety lab building the Claude model family.
 
@@ -592,7 +592,7 @@ On the map: https://subconscious-systems.github.io/united-states-of-inference/#n
 
 ### RunInfra (Ohio)
 
-The Wright brothers tested about 200 wing shapes in a homemade wind tunnel in Dayton before they flew. RunInfra’s agent tests serving setups the same way before it deploys yours.
+The Wright brothers tested 200 wing designs in their Dayton bike shop before they ever left the ground. RunInfra tests your serving setup before it ships.
 
 Agent that benchmarks and deploys open-model inference stacks.
 

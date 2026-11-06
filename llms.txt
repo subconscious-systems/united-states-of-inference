@@ -434,7 +434,7 @@ On the map: https://subconscious-systems.github.io/united-states-of-inference/#n
 
 ### New York: Anthropic
 
-Midtown is where the biggest enterprise deals get signed. These days, a lot of them say Claude.
+New York runs on enterprise contracts, from Wall Street banks to Midtown law firms. Anthropic makes most of its money selling Claude to businesses like them.
 
 AI safety lab building the Claude model family.
 
@@ -475,7 +475,7 @@ On the map: https://subconscious-systems.github.io/united-states-of-inference/#n
 
 ### Ohio: RunInfra
 
-The Wright brothers tested about 200 wing shapes in a homemade wind tunnel in Dayton before they flew. RunInfra’s agent tests serving setups the same way before it deploys yours.
+The Wright brothers tested 200 wing designs in their Dayton bike shop before they ever left the ground. RunInfra tests your serving setup before it ships.
 
 Agent that benchmarks and deploys open-model inference stacks.
 
