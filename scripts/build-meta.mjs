@@ -81,7 +81,8 @@ const jsonld = {
 const between = (src, tag, body) => {
   const re = new RegExp(`(<!-- ${tag}:start -->)[\\s\\S]*?(\\s*<!-- ${tag}:end -->)`);
   if (!re.test(src)) throw new Error(`missing ${tag} markers in index.html`);
-  return src.replace(re, `$1\n${body}$2`);
+  // a function replacer, so "$" in the copy (prices like $20B) is never read as a pattern
+  return src.replace(re, (_, start, end) => `${start}\n${body}${end}`);
 };
 
 let html = readFileSync(join(root, "index.html"), "utf8");
