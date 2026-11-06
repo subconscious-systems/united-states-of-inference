@@ -312,7 +312,7 @@ On the map: https://subconscious-systems.github.io/united-states-of-inference/#m
 
 ### Minnesota: Cohere
 
-Minnesota is about as Canadian as America gets, and Cohere is the Toronto-born lab with impeccable manners toward enterprise buyers.
+Minnesota is where Target, 3M and General Mills keep their headquarters, a polite drive from Canada. Cohere is the Toronto lab that builds AI for companies exactly like them.
 
 Enterprise and sovereign AI models (Command) and the North platform.
 

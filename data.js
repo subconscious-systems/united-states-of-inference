@@ -22,7 +22,7 @@ export const ASSIGNMENTS = {
   "Maryland": ["cloudflare", "Cloudflare Workers AI", "The NSA lives in Maryland. So does the company that sits in front of a big chunk of the internet."],
   "Massachusetts": ["subconscious", "Subconscious", "Home of the oldest modern marathon, the Boston Marathon. Subconscious builds Marathon models that keep agents going for hours."],
   "Michigan": ["morph", "Morph", "Michigan gave the world the moving assembly line, where each specialist does one job at blistering speed, and Morph applies that idea to code edits."],
-  "Minnesota": ["cohere", "Cohere", "Minnesota is about as Canadian as America gets, and Cohere is the Toronto-born lab with impeccable manners toward enterprise buyers."],
+  "Minnesota": ["cohere", "Cohere", "Minnesota is where Target, 3M and General Mills keep their headquarters, a polite drive from Canada. Cohere is the Toronto lab that builds AI for companies exactly like them."],
   "Mississippi": ["stepfun", "StepFun", "The Ole Miss Rebels love picking fights with bigger SEC programs. StepFun is a startup picking fights with China’s tech giants."],
   "Missouri": ["infron", "Infron", "St. Louis has the Gateway to the West. Infron is a gateway to 400+ models."],
   "Montana": ["armada", "Armada", "Montana has ranches a hundred miles from the nearest data center. Armada ships the data center to the ranch."],

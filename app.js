@@ -1,5 +1,5 @@
 import { STATES } from "./states.js?v=10";
-import { ASSIGNMENTS } from "./data.js?v=34";
+import { ASSIGNMENTS } from "./data.js?v=35";
 
 const W = 975;
 const H = 610;
@@ -481,6 +481,106 @@ function closeAll() {
 viewAllBtn.addEventListener("click", () => (allEl.classList.contains("open") ? closeAll() : openAll()));
 $("all-close").addEventListener("click", closeAll);
 $("all-backdrop").addEventListener("click", closeAll);
+
+/* ---------- search: cmd/ctrl + k, by inference company ---------- */
+
+const searchEl = $("search");
+const searchInput = $("search-input");
+const searchList = $("search-results");
+const providers = [...byName.values()].sort((a, b) => a.pname.localeCompare(b.pname));
+let matches = [];
+let active = 0;
+let searchReturnFocus = null;
+
+// best matches first: name starts with the query, then a word in it does, then it appears anywhere,
+// then (3+ letters) the letters appear in order, so "ggl" finds Google
+function rank(v, q) {
+  const name = v.pname.toLowerCase();
+  if (!q) return 1;
+  if (name.startsWith(q)) return 4;
+  if (name.split(/[\s.\-]+/).some((w) => w.startsWith(q))) return 3;
+  if (name.includes(q) || v.pid.includes(q.replace(/\s+/g, ""))) return 2;
+  if (q.length < 3) return 0; // in-order letters only once the query says enough
+  let i = 0;
+  for (const ch of name) if (ch === q[i]) i++;
+  return i === q.length ? 0.5 : 0;
+}
+
+function renderSearch() {
+  const q = searchInput.value.trim().toLowerCase();
+  matches = providers
+    .map((v) => ({ v, r: rank(v, q) }))
+    .filter((m) => m.r > 0)
+    .sort((a, b) => b.r - a.r || a.v.pname.localeCompare(b.v.pname))
+    .map((m) => m.v);
+  active = 0;
+  searchList.innerHTML = matches.length
+    ? matches
+        .map(
+          (v, i) => `<li class="search-result" role="option" id="sr-${i}" data-i="${i}" aria-selected="${i === active}">
+            ${swatchHTML(v)}<span class="s-name">${esc(v.pname)}</span><span class="s-state">${esc(v.s.name)}</span></li>`
+        )
+        .join("")
+    : `<li class="search-empty" role="option" aria-disabled="true">No provider matches “${esc(searchInput.value.trim())}”</li>`;
+  searchInput.setAttribute("aria-activedescendant", matches.length ? "sr-0" : "");
+}
+
+function setActive(i) {
+  if (!matches.length) return;
+  active = (i + matches.length) % matches.length;
+  searchList.querySelectorAll(".search-result").forEach((li, j) => li.setAttribute("aria-selected", String(j === active)));
+  const li = $(`sr-${active}`);
+  searchInput.setAttribute("aria-activedescendant", li.id);
+  li.scrollIntoView({ block: "nearest" });
+}
+
+function openSearch() {
+  if (allEl.classList.contains("open")) closeAll();
+  searchReturnFocus = document.activeElement;
+  searchInput.value = "";
+  renderSearch();
+  searchEl.classList.add("open");
+  searchEl.setAttribute("aria-hidden", "false");
+  searchInput.focus({ preventScroll: true });
+}
+function closeSearch({ restoreFocus = true } = {}) {
+  searchEl.classList.remove("open");
+  searchEl.setAttribute("aria-hidden", "true");
+  if (restoreFocus) searchReturnFocus?.focus?.({ preventScroll: true });
+}
+function pick(i) {
+  const v = matches[i];
+  if (!v) return;
+  closeSearch({ restoreFocus: false });
+  if (current !== v.s.name) select(v.s.name);
+}
+
+searchInput.addEventListener("input", renderSearch);
+searchList.addEventListener("pointermove", (e) => {
+  const li = e.target.closest(".search-result");
+  if (li && Number(li.dataset.i) !== active) setActive(Number(li.dataset.i));
+});
+searchList.addEventListener("click", (e) => {
+  const li = e.target.closest(".search-result");
+  if (li) pick(Number(li.dataset.i));
+});
+$("search-backdrop").addEventListener("click", () => closeSearch());
+
+document.addEventListener("keydown", (e) => {
+  if (e.key.toLowerCase() === "k" && (e.metaKey || e.ctrlKey)) {
+    e.preventDefault();
+    e.stopImmediatePropagation();
+    searchEl.classList.contains("open") ? closeSearch() : openSearch();
+    return;
+  }
+  if (!searchEl.classList.contains("open")) return;
+  // while the search is open, it owns the keyboard
+  e.stopImmediatePropagation();
+  if (e.key === "Escape") closeSearch();
+  else if (e.key === "ArrowDown") { e.preventDefault(); setActive(active + 1); }
+  else if (e.key === "ArrowUp") { e.preventDefault(); setActive(active - 1); }
+  else if (e.key === "Enter") { e.preventDefault(); pick(active); }
+});
 
 document.addEventListener("keydown", (e) => {
   if (allEl.classList.contains("open")) {
