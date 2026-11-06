@@ -161,19 +161,19 @@
       "Built for remote sites like energy fields, defense and mining with little or no connectivity"
     ]
   },
-  "openscale": {
-    "file": "openscale.svg",
-    "primary": "#08090B",
+  "makora": {
+    "file": "makora.svg",
+    "primary": "#2A1BD8",
     "secondary": "#FFFFFF",
     "ink": "#ffffff",
     "mono": true,
-    "source": "https://openscale.so/favicon.svg (tile removed)",
-    "url": "https://openscale.so",
-    "tagline": "Cheap, fast API for DeepSeek V4.1 Flash and GLM open models",
+    "source": "https://www.makora.com/ (M from the site wordmark)",
+    "url": "https://www.makora.com",
+    "tagline": "Inference endpoints tuned by AI agents, down to the GPU kernels",
     "facts": [
-      "Narrow menu, low prices: DeepSeek V4.1 Flash and GLM models",
-      "DeepSeek V4.1 Flash at $0.06/M input on promo, at 200+ tok/s",
-      "Speaks both the OpenAI and Anthropic API formats"
+      "Agents optimize every layer: routing, speculative decoding, vLLM/SGLang tuning and custom CUDA kernels",
+      "Claims the highest tokens per second per user, up to 5x faster than other providers",
+      "Runs on NVIDIA, AMD, Google TPU, AWS Trainium and more, with no hardware lock-in"
     ]
   },
   "vercel": {

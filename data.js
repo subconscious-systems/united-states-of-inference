@@ -11,7 +11,7 @@ export const ASSIGNMENTS = {
   "Florida": ["meta", "Meta", "Nobody can predict Florida Man or Meta: Llama one year, Muse the next, a retired API in between. Your grandma probably thinks Muse is cute."],
   "Georgia": ["openrouter", "OpenRouter", "Atlanta’s Hartsfield-Jackson is the busiest airport in the country, and OpenRouter is where the AI industry changes planes."],
   "Hawaii": ["dolphin", "Dolphin", "Hawaii’s spinner dolphins swim wherever they want. Dolphin’s models say whatever they want, running on home GPUs scattered across a network."],
-  "Idaho": ["openscale", "OpenScale", "Idaho grows cheap potatoes by the ton. OpenScale serves cheap tokens by the million."],
+  "Idaho": ["makora", "Makora", "Boise is home to Micron, which makes the memory stacked inside today’s GPUs. Makora’s agents rewrite the code running on those GPUs until it’s up to 5x faster."],
   "Illinois": ["vercel", "Vercel AI Gateway", "Every trip across America seems to connect through O’Hare. Every model call can connect through Vercel."],
   "Indiana": ["groq", "Groq", "Built for tight, predictable latency, Groq belongs at the Indy 500, where the winning car holds its line for 500 miles."],
   "Iowa": ["wafer", "Wafer", "Iowa farmers brag about bushels per acre, and Wafer brags about tokens per second on the same weights everyone else runs."],

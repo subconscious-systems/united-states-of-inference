@@ -158,17 +158,17 @@ Website: https://dphn.ai
 
 On the map: https://subconscious-systems.github.io/united-states-of-inference/#hawaii
 
-### Idaho: OpenScale
+### Idaho: Makora
 
-Idaho grows cheap potatoes by the ton. OpenScale serves cheap tokens by the million.
+Boise is home to Micron, which makes the memory stacked inside today’s GPUs. Makora’s agents rewrite the code running on those GPUs until it’s up to 5x faster.
 
-Cheap, fast API for DeepSeek V4.1 Flash and GLM open models.
+Inference endpoints tuned by AI agents, down to the GPU kernels.
 
-- Narrow menu, low prices: DeepSeek V4.1 Flash and GLM models
-- DeepSeek V4.1 Flash at $0.06/M input on promo, at 200+ tok/s
-- Speaks both the OpenAI and Anthropic API formats
+- Agents optimize every layer: routing, speculative decoding, vLLM/SGLang tuning and custom CUDA kernels
+- Claims the highest tokens per second per user, up to 5x faster than other providers
+- Runs on NVIDIA, AMD, Google TPU, AWS Trainium and more, with no hardware lock-in
 
-Website: https://openscale.so
+Website: https://www.makora.com
 
 On the map: https://subconscious-systems.github.io/united-states-of-inference/#idaho
 
