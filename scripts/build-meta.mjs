@@ -153,6 +153,36 @@ ${rows
 `;
 writeFileSync(join(root, "agents.md"), agents);
 
+// the same Markdown as a page that opens in the browser (a bare .md link downloads)
+writeFileSync(
+  join(root, "agents.html"),
+  `<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>agents.md · ${TITLE}</title>
+  <meta name="description" content="Every state and provider match on ${TITLE}, as Markdown for agents.">
+  <link rel="canonical" href="${SITE}agents.html">
+  <link rel="alternate" type="text/markdown" href="agents.md">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <meta name="color-scheme" content="dark light">
+  <style>
+    :root { --bg: #0c0c0d; --fg: #ededed; --muted: #8e8e93; }
+    @media (prefers-color-scheme: light) { :root { --bg: #fafaf9; --fg: #161616; --muted: #6b6b70; } }
+    body { margin: 0; background: var(--bg); color: var(--fg); }
+    nav { max-width: 860px; margin: 0 auto; padding: 20px 16px 0; font: 13px/1.4 ui-sans-serif, system-ui, sans-serif; display: flex; gap: 16px; }
+    nav a { color: var(--muted); text-decoration: none; } nav a:hover { color: var(--fg); }
+    pre { max-width: 860px; margin: 0 auto; padding: 20px 16px 48px; font: 13px/1.6 ui-monospace, SFMono-Regular, Menlo, monospace; white-space: pre-wrap; overflow-wrap: anywhere; }
+  </style>
+</head>
+<body>
+  <nav><a href="./">← Back to the map</a><a href="agents.md">Raw agents.md</a></nav>
+  <pre>${esc(agents)}</pre>
+</body>
+</html>
+`
+);
 
 /* ---------- sitemap.xml ---------- */
 
@@ -163,6 +193,7 @@ writeFileSync(
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url><loc>${SITE}</loc><lastmod>${today}</lastmod></url>
   <url><loc>${SITE}llms.txt</loc><lastmod>${today}</lastmod></url>
+  <url><loc>${SITE}agents.html</loc><lastmod>${today}</lastmod></url>
   <url><loc>${SITE}agents.md</loc><lastmod>${today}</lastmod></url>
 </urlset>
 `
