@@ -46,7 +46,7 @@ Source: https://subconscious-systems.github.io/united-states-of-inference/ · Ma
 | New Hampshire | Refuseless | New Hampshire stamps Live Free or Die on every license plate, and Refuseless builds models that follow the motto. | https://refuseless.com |
 | New Jersey | ElevenLabs | Edison recorded the first human voice in Menlo Park. ElevenLabs can now fake yours. | https://elevenlabs.io |
 | New Mexico | fal | Santa Fe is one of the biggest art markets in the country and Albuquerque keeps film crews busy, a fitting home for fal and its thousand-plus generative media models. | https://fal.ai |
-| New York | Anthropic | New York runs on enterprise contracts, from Wall Street banks to Midtown law firms. Anthropic makes most of its money selling Claude to businesses like them. | https://www.anthropic.com |
+| New York | Anthropic | New York is the business capital of the world, plus millions of regular people upstate. Anthropic dominates enterprise AI and still serves millions of individuals with Claude. | https://www.anthropic.com |
 | North Carolina | SambaNova | NASCAR country loves heavy machines moving at absurd speed, and SambaNova pushes giant open models fast on its own dataflow chips. | https://sambanova.ai |
 | North Dakota | Boundless | The prairie runs to the horizon in every direction, and Boundless tunes reserved capacity so you never hit the edge. | https://boundless.network |
 | Ohio | RunInfra | The Wright brothers tested 200 wing designs in their Dayton bike shop before they ever left the ground. RunInfra tests your serving setup before it ships. | https://runinfra.ai |
@@ -551,7 +551,7 @@ On the map: https://subconscious-systems.github.io/united-states-of-inference/#n
 
 ### Anthropic (New York)
 
-New York runs on enterprise contracts, from Wall Street banks to Midtown law firms. Anthropic makes most of its money selling Claude to businesses like them.
+New York is the business capital of the world, plus millions of regular people upstate. Anthropic dominates enterprise AI and still serves millions of individuals with Claude.
 
 AI safety lab building the Claude model family.
 

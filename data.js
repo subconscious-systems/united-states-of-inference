@@ -31,7 +31,7 @@ export const ASSIGNMENTS = {
   "New Hampshire": ["refuseless", "Refuseless", "New Hampshire stamps Live Free or Die on every license plate, and Refuseless builds models that follow the motto."],
   "New Jersey": ["elevenlabs", "ElevenLabs", "Edison recorded the first human voice in Menlo Park. ElevenLabs can now fake yours."],
   "New Mexico": ["fal", "fal", "Santa Fe is one of the biggest art markets in the country and Albuquerque keeps film crews busy, a fitting home for fal and its thousand-plus generative media models."],
-  "New York": ["anthropic", "Anthropic", "New York runs on enterprise contracts, from Wall Street banks to Midtown law firms. Anthropic makes most of its money selling Claude to businesses like them."],
+  "New York": ["anthropic", "Anthropic", "New York is the business capital of the world, plus millions of regular people upstate. Anthropic dominates enterprise AI and still serves millions of individuals with Claude."],
   "North Carolina": ["sambanova", "SambaNova", "NASCAR country loves heavy machines moving at absurd speed, and SambaNova pushes giant open models fast on its own dataflow chips."],
   "North Dakota": ["boundless", "Boundless", "The prairie runs to the horizon in every direction, and Boundless tunes reserved capacity so you never hit the edge."],
   "Ohio": ["runinfra", "RunInfra", "The Wright brothers tested 200 wing designs in their Dayton bike shop before they ever left the ground. RunInfra tests your serving setup before it ships."],
