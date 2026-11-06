@@ -251,7 +251,14 @@ body {
 .state:focus-visible { stroke: var(--fg); stroke-width: 2; }
 
 /* dim by darkening (not transparency) so fills and logos — white or black — fade by the same amount */
-.map.has-selection .state:not(.selected) { filter: brightness(0.3) saturate(0.85); }
+/* dimming: a background-colored layer between the states and the lifted one */
+#dim {
+  fill: var(--bg);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 200ms ease;
+}
+.map.has-selection #dim { opacity: 0.7; }
 
 /* the selected state gets lifted onto its own layer */
 #lift path {
@@ -403,6 +410,33 @@ body {
   .close:hover { background: var(--line); color: var(--fg); }
 }
 .close:active { transform: scale(0.92); }
+
+/* previous / next state, left of the close button */
+.step {
+  position: absolute;
+  z-index: 2;
+  top: 14px;
+  right: 46px;
+  display: flex;
+  gap: 2px;
+}
+.step-btn {
+  width: 30px;
+  height: 30px;
+  display: grid;
+  place-items: center;
+  border: 0;
+  border-radius: 6px;
+  background: transparent;
+  color: var(--muted);
+  cursor: pointer;
+  transition: background-color 150ms ease, color 150ms ease, transform 120ms var(--ease-out);
+}
+@media (hover: hover) and (pointer: fine) {
+  .step-btn:hover { background: var(--line); color: var(--fg); }
+}
+.step-btn:active { transform: scale(0.92); }
+.step-btn:focus-visible { outline: 2px solid var(--fg); outline-offset: 2px; }
 .close:focus-visible { outline: 2px solid var(--fg); outline-offset: 2px; }
 
 .panel-inner { will-change: opacity, filter; }

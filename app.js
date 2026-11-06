@@ -223,6 +223,9 @@ function select(name, { instant = false } = {}) {
   current = name;
   const v = byName.get(name);
 
+  $("prev").setAttribute("aria-label", `Previous state: ${neighbor(-1)}`);
+  $("next").setAttribute("aria-label", `Next state: ${neighbor(1)}`);
+
   // dim everything else, lift the chosen state onto its own layer
   mapEl.classList.add("has-selection");
   for (const o of byName.values()) {
@@ -233,7 +236,7 @@ function select(name, { instant = false } = {}) {
   v.logo.style.setProperty("--lift", v.lift);
   // the state scales around its bounding-box center, so carry the logo along with it
   const bb = v.path.getBBox();
-  const k = (v.lift - 1) / v.size * 100;
+  const k = (v.lift - 1) / (v.p.logoWidth || v.size) * 100;
   v.logo.style.setProperty("--tx", `${((v.s.cx - (bb.x + bb.width / 2)) * k).toFixed(2)}%`);
   v.logo.style.setProperty("--ty", `${((v.s.cy - (bb.y + bb.height / 2)) * k).toFixed(2)}%`);
   setLift(v, instant);
@@ -308,11 +311,18 @@ function makeRoom() {
   const gutter = isSheet() ? 16 : 24;
   if (isSheet()) {
     const sheetTop = innerHeight - panel.offsetHeight - 8;
-    const v = byName.get(current);
-    const stateY = m.top + (v.s.cy / H) * m.height;
-    const target = Math.min(sheetTop - 24, m.bottom) - stateY;
-    const minTop = 56 - m.top; // don't push the map under the title
-    const ty = Math.max(minTop, Math.min(0, target - m.height * 0.15));
+    const headerBottom = 60; // don't push the map under the title
+    let ty;
+    if (m.height <= sheetTop - headerBottom) {
+      // the whole map fits above the sheet: sit it just under the title so every state stays tappable
+      ty = headerBottom + Math.max(0, (sheetTop - headerBottom - m.height) / 2) - m.top;
+    } else {
+      // otherwise keep the selected state in view above the sheet
+      const v = byName.get(current);
+      const stateY = m.top + (v.s.cy / H) * m.height;
+      ty = Math.max(headerBottom - m.top, Math.min(0, sheetTop - 40 - stateY));
+    }
+    ty = Math.min(0, ty);
     mapEl.style.transform = ty ? `translateY(${Math.round(ty)}px)` : "";
     return;
   }
@@ -487,12 +497,22 @@ document.addEventListener("keydown", (e) => {
   }
   if (!current || (e.key !== "ArrowRight" && e.key !== "ArrowLeft")) return;
   e.preventDefault();
-  const i = order.indexOf(current);
-  const next = order[(i + (e.key === "ArrowRight" ? 1 : order.length - 1)) % order.length];
-  current = null; // so select() doesn't treat it as a toggle
-  select(next, { instant: true });
+  const next = step(e.key === "ArrowRight" ? 1 : -1, { instant: true });
   byName.get(next).path.focus({ preventScroll: true });
 });
+
+/* previous / next: walk the states alphabetically, wrapping around */
+function neighbor(dir) {
+  const i = order.indexOf(current);
+  return order[(i + dir + order.length) % order.length];
+}
+function step(dir, opts) {
+  const next = neighbor(dir);
+  select(next, opts);
+  return next;
+}
+$("prev").addEventListener("click", () => step(-1));
+$("next").addEventListener("click", () => step(1));
 
 /* swipe the sheet down to dismiss — a quick flick is enough */
 (() => {
