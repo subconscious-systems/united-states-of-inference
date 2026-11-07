@@ -197,6 +197,15 @@ writeFileSync(
 `
 );
 
+/* ---------- README.md: the full table ---------- */
+
+const readmePath = join(root, "README.md");
+const readme = readFileSync(readmePath, "utf8");
+const readmeTable = `| State | Provider | Why |
+| --- | --- | --- |
+${rows.map((r) => `| [${cell(r.state)}](${SITE}#${slug(r.state)}) | ${r.url ? `[${cell(r.provider)}](${r.url})` : cell(r.provider)} | ${cell(r.why)} |`).join("\n")}`;
+writeFileSync(readmePath, between(readme, "readme", readmeTable));
+
 /* ---------- sitemap.xml ---------- */
 
 const today = new Date().toISOString().slice(0, 10);
@@ -212,4 +221,4 @@ writeFileSync(
 `
 );
 
-console.log(`wrote ${rows.length} states to index.html, llms.txt, agents.md, sitemap.xml`);
+console.log(`wrote ${rows.length} states to index.html, README.md, llms.txt, agents.md, sitemap.xml`);
